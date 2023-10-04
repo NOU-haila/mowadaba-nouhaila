@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <title>Mowadaba</title>
+</head>
+<style>
+  body {
+      background-color: #8a8080;
+  }
+  .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  }
+  h2 {
+      text-align: center;
+      color:#031691;
+  }
+  .input-field label {
+      color: #333;
+  }
+  input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box
+  }
+  input[type=submit] {
+    width: 100%;
+    background-color: #031691;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=email], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box
+  }
+
+  input[type=tel], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box
+  }
+  input[type=date], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box
+  }
+ 
+  input[type=text] {
+    border: 2px solid red;
+    border-radius: 4px;
+  }
+  .input-field input[type="text"],
+  .input-field input[type="date"],
+  .input-field select {
+      border: 1px solid #1d0263;
+  }
+  .btn {
+      background-color: #031691;
+      color: #fff;
+  }
+</style>
+<body>
+  <div class="container">
+      <h2>Inscription Mowadaba</h2>
+      <form id="inscriptionForm" action="inscription.php" method="post">
+         
+          <div class="input-field">
+            <label for="nom">Nom:</label><br>
+              <input type="text" id="nom" name="nom" required>
+             
+          </div>
+         
+          <div class="input-field">
+            <label for="prenom">Prénom:</label><br>
+              <input type="text" id="prenom" name="prenom" required>
+              
+          </div>
+          <div class="input-field">
+            <label for="date_naissance">Date de naissance:</label><br>
+            <input type="date" id="date_naissance" name="date_naissance" required>
+          
+        </div>
+        <p>
+          <label>
+              <input type="radio" name="sexe" value="Homme" required>
+              <span>Homme</span>
+          </label>
+          <label>
+              <input type="radio" name="sexe" value="Femme" required>
+              <span>Femme</span>
+          </label>
+      </p>
+
+        <div class="input-field">
+          <label for="classe">Classe:</label>
+          <select id="classe" name="classe" >
+              <option value="" >Choisissez votre classe</option>
+              <option value="SRI1">SRI1</option>
+              <option value="SRI2">SRI2</option>
+              <option value="DSI1">DSI1</option>
+              <option value="DSI2">DSI2</option>
+          </select>
+         
+      </div>
+      <div class="input-field">
+        <label for="email">Adresse e-mail:</label><br>
+
+        <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="input-field">
+      <label for="telephone">Numéro de téléphone :</label><br>
+      <input type="tel" id="telephone" name="telephone" required>
+      
+  </div>
+
+  <div class="input-field">
+    <label for="telephone_pere">Numéro de téléphone du père:</label><br>
+    <input type="tel" id="telephone_pere" name="telephone_pere" required>
+   
+</div>
+<div class="input-field">
+  <label for="telephone_mere">Numéro de téléphone de la mère:</label><br>
+  <input type="tel" id="telephone_mere" name="telephone_mere" required>
+  
+</div>
+
+<div class="input-field">
+  <label for="cin">CIN: (Carte d'identité nationale)</label><br>
+  <input type="text" id="cin" name="cin" required>
+ 
+</div>
+<div class="input-field">
+  <label for="massar">Massar: (Identifiant Massar)</label><br>
+
+  <input type="text" id="massar" name="massar" required><br>
+  
+</div>
+
+<input type="submit" value="s'inscrire">
+</form>
+</div>
+
+<!-- Inclure les fichiers JavaScript de Materialize et votre propre script de validation -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="validation.js"></script>
+
+
+</body>
+</html>
